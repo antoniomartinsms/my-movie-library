@@ -7,6 +7,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .vscode/
+*.exe
 
 # Additional Ruby/bundler ignore for when you run: bundle install
 /vendor
