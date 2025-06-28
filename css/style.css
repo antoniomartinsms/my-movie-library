@@ -189,3 +189,57 @@ footer {
   color: inherit; /* Faz o link herdar a cor do texto do seu pai */
   text-decoration: none; /* Remove o sublinhado */
 }
+
+.movie-details-container{
+  background: #F4F5F6;
+  padding: 86px 90px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  display: flex;
+  gap: 65px;
+  align-items: flex-start;
+
+  max-width: 1200px;
+  margin: 55px auto;
+  
+}
+
+.movie-poster{
+  flex-shrink: 0; 
+}
+
+.movie-poster img{
+  width: 380px;
+  border-radius: 12px;
+}
+
+
+.movie-title{
+  font-weight: 700;
+  font-size: 46px;
+  margin-bottom: 46px;;
+}
+
+.movie-details-info p {
+  font-size: 22px;
+  line-height: 1.5; 
+}
+
+.movie-section{
+  margin-bottom: 20px;
+}
+
+.rating-details{
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+}
+
+.rating-details .rating {
+  margin: 0;
+}
+
+.review-title{
+  margin-bottom: 5px;
+}
