@@ -37,3 +37,54 @@ footer {
   font-size: 16px;
 }
 
+.movie-card {
+  background-color: #f4f5f6;
+  border: 1px solid #8d99ae;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 4px 3px 0px #00000040;
+}
+
+.movie-card img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do seu container (.movie-card) */
+  height: 240px; /* Define uma altura fixa para todas as imagens de pôster */
+  object-fit: cover; /* Garante que a imagem cubra a área sem se distorcer */
+  
+  /* Arredonda apenas os cantos superior-esquerdo e superior-direito */
+  border-radius: 12px 12px 0 0; 
+}
+
+.movie-card h3 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 19px;
+}
+
+.rating {
+  color: red;
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  -webkit-text-stroke: 1px #ef233c;
+}
+
+.star-empty {
+  color: white;
+}
+
+.add-button {
+  background-color: #ef233c;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 12px; /* Adição do arredondamento de borda */
+}
+
+footer {
+  background-color: #f4f5f6;
+  text-align: center;
+  font-size: 16px;
+  padding: 15.25px; /* Adição de espaçamento interno */
+}
