@@ -183,3 +183,9 @@ footer {
   cursor: pointer;              /* Mostra a 'mãozinha' ao passar o mouse */
   margin-top: 10px;             /* Espaço acima do botão */
 }
+
+/* Remove o estilo padrão de link dos nossos cards */
+.movie-card-link {
+  color: inherit; /* Faz o link herdar a cor do texto do seu pai */
+  text-decoration: none; /* Remove o sublinhado */
+}
