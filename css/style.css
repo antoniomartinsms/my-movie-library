@@ -26,7 +26,7 @@ header {
   background-color: #2b2d42;
   color: #ffffff;
   height: 80px; /* Adicionamos uma altura fixa */
-  padding: 26px 20px;
+  padding: 0 5%;
 
   /* --- Flexbox --- */
   display: flex;              /* 1. Ativa o layout flexível */
@@ -119,9 +119,51 @@ footer {
   column-gap: 60px;                /* Define o espaçamento entre os cards na mesma linha */
 }
 
+@media (max-width: 540px) {
+  /* Altera o layout do container de cards APENAS em telas de celular */
+  .movie-list-container {
+    /* Esta regra SÓ se aplica se a tela tiver 540px ou menos de largura */
+    justify-content: center;
+  }
+}
+
 .form-page-container{
   max-width: 800;
   margin: 60px auto;
+}
+
+@media (max-width: 540px) {
+  /* ... */
+
+  /* Ajusta o container geral da página do formulário para ter menos margem vertical e um padding lateral garantido */
+  .form-page-container {
+    margin: 30px auto; 
+    padding: 0 15px;
+  }
+
+  /* Reduz o tamanho do título principal da página para caber melhor na tela */
+  .form-page-container h2 {
+    font-size: 30px;
+  }
+
+  /* Diminui o espaçamento interno do 'card' do formulário */
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  /* Reduz o tamanho da fonte dos rótulos (labels) para uma melhor proporção */
+  .form-group label {
+    font-size: 20px;
+  }
+
+  /* A principal mudança para responsividade do formulário */
+  .form-row {
+    /* Faz os itens que estavam lado a lado (como 'Stars' e 'Watched Date') ficarem empilhados verticalmente */
+    flex-direction: column;
+
+    /* Não precisamos mais de um espaço entre os campos, pois eles não estão mais na mesma linha */
+    gap: 0px;
+  }
 }
 
 .form-page-container h2 {
@@ -203,6 +245,38 @@ footer {
   max-width: 1200px;
   margin: 55px auto;
   
+}
+
+@media (max-width: 540px) {
+
+    /* 1. Faz o layout de duas colunas virar uma só, empilhando os itens */
+    .movie-details-container {
+        flex-direction: column; /* Altera o eixo principal do Flexbox para vertical, colocando o pôster em cima das informações. */
+        align-items: center;    /* Centraliza os itens empilhados (o pôster e o bloco de informações) na horizontal. */
+        gap: 20px;              /* Agora, o 'gap' controla o espaçamento vertical entre o pôster e o bloco de informações. */
+        padding: 20px;          /* Reduz o espaçamento interno do card para otimizar o espaço em telas menores. */
+        margin: 30px 15px;      /* Reduz a margem vertical e garante uma margem lateral para não colar nas bordas da tela. */
+    }
+    
+    /* 2. Garante que o pôster se ajuste à tela e não fique muito grande */
+    .movie-poster img {
+        width: 100%;      /* Faz a imagem ter a largura máxima de seu container, tornando-a fluida. */
+        max-width: 280px; /* Limita a largura da imagem para que ela não fique excessivamente grande. */
+    }
+    
+    /* 3. Ajusta os tamanhos das fontes para uma melhor leitura no mobile */
+    .rating {
+        font-size: 20px; /* Diminui o tamanho das estrelas. */
+    }
+    
+    .movie-details-info h1 {
+        font-size: 24px;      /* Reduz o tamanho do título do filme. */
+        text-align: center;   /* Centraliza o título, o que geralmente fica mais harmonioso no layout de coluna única. */
+    }
+    
+    .movie-details-info p {
+        font-size: 16px; /* Reduz o tamanho do texto dos parágrafos, melhorando a legibilidade no celular. */
+    }
 }
 
 .movie-poster{
