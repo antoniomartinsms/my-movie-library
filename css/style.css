@@ -81,6 +81,7 @@ footer {
   text-align: center;
   box-shadow: 0px 4px 3px 0px #00000040;
   transition: box-shadow 0.3s ease-in-out;
+  animation: fadeInUp 0.8s ease-out forwards; /* Aplicando a animação */
 }
 
 /* Nova regra para o estado hover */
@@ -96,6 +97,20 @@ footer {
   /* Arredonda apenas os cantos superior-esquerdo e superior-direito */
   border-radius: 12px 12px 0 0; 
 }
+
+/* Definição da nossa animação de entrada chamada 'fadeInUp' */
+@keyframes fadeInUp {
+  from { /* Estado inicial (0% da animação) */
+    opacity: 0;                  /* Começa totalmente transparente */
+    transform: translateY(20px); /* Começa 20px deslocado para baixo */
+  }
+
+  to { /* Estado final (100% da animação) */
+    opacity: 1;                  /* Termina totalmente visível */
+    transform: translateY(0);    /* Termina na sua posição original (sem deslocamento) */
+  }
+}
+
 
 .movie-card h3 {
   font-weight: 700;
